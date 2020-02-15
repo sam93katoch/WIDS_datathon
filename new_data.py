@@ -56,8 +56,8 @@ def drop_correlated(df):
     print('There are %d columns to remove.' % (len(to_drop)))
     #Drop the columns with high correlations
     df_thresh = df.drop(columns = to_drop)
+    df_thresh = categorical_2_onehot(df_thresh)
+    df_thresh.fillna(0, inplace = True)
     df_thresh.to_csv('removed_correlated_features.csv')
     
 drop_correlated(df)
-#dimensionality reduction
-#df.to_csv('out.csv')
