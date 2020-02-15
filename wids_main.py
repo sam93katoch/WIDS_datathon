@@ -45,15 +45,6 @@ def main(args):
         joblib.dump(clf, joblib_file)
 
 
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--data', type=str, default = 'training.csv', help = 'Preprocessed data')
