@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 
 def main():
     training_file = args.data
-    training_df = pd.read_csv(training_file)
+    training_df = pd.read_csv(training_file, index_col = 0)
     features = training_df.columns
     X = training_df.loc[:, training_df.columns != 'hospital_death']
     y = training_df['hospital_death']
